@@ -9,7 +9,7 @@ def estimate_real_coords(drone_lat, drone_lon, altitude, heading, gimbal_pitch, 
     Parameters:
     - drone_lat, drone_lon: Drone's GPS coordinates (degrees).
     - altitude: Drone's altitude (meters).
-    - heading: Drone's heading (degrees, 0-360 clockwise from North).
+    - heading: Drone's heading (degrees, -180-180 clockwise from North).
     - gimbal_pitch: Gimbal pitch (degrees, -90 to 0).
     - x_pixel, y_pixel: Target's pixel coordinates.
     - image_width, image_height: Image dimensions.
@@ -75,11 +75,43 @@ if __name__ == "__main__":
     # hfov, vfov = 69.6, 55.2  # degrees
 
     # Drone parameters 2 0022 34.04037669013741, -118.53544857266266
-    drone_lat, drone_lon = 34.04031472222222, -118.5352650277778 
+    # drone_lat, drone_lon = 34.04031472222222, -118.5352650277778 
+    # altitude = 80  # meters
+    # heading = -44.8  # degrees
+    # gimbal_pitch = -59.9  # degrees
+    # x_pixel, y_pixel = 675, 2445  # Image size 1600x1200
+    # hfov, vfov = 69.6, 55.2  # degrees
+
+    # ## 128 34.03940622314881, -118.53409494322955
+    # drone_lat, drone_lon = 34.03930138888889, -118.5345236944444
+    # altitude = 80  # meters
+    # heading = 44.8  # degrees
+    # gimbal_pitch = -59.9  # degrees
+    # x_pixel, y_pixel = 3657, 1653  # Image size 1600x1200
+    # hfov, vfov = 69.6, 55.2  # degrees
+
+    # ## 129 34.03925629546663, -118.53381325653338
+    # drone_lat, drone_lon = 34.03930127777777, -118.5345235555556
+    # altitude = 80  # meters
+    # heading = 90  # degrees
+    # gimbal_pitch = -59.9  # degrees
+    # x_pixel, y_pixel = 2250, 993  # Image size 1600x1200
+    # hfov, vfov = 69.6, 55.2  # degrees
+
+    # ## 130 34.039245893920345, -118.53381200633686
+    # drone_lat, drone_lon = 34.03930161111111, -118.5345236944444
+    # altitude = 80  # meters
+    # heading = 90.1  # degrees
+    # gimbal_pitch = -32  # degrees
+    # x_pixel, y_pixel = 2303, 2504  # Image size 1600x1200
+    # hfov, vfov = 69.6, 55.2  # degrees
+
+    ## 131 34.03911397127907, -118.53399104254375
+    drone_lat, drone_lon = 34.03930163888889, -118.53452375
     altitude = 80  # meters
-    heading = -44.8  # degrees
-    gimbal_pitch = -59.9  # degrees
-    x_pixel, y_pixel = 675, 2445  # Image size 1600x1200
+    heading = 135  # degrees
+    gimbal_pitch = -32  # degrees
+    x_pixel, y_pixel = 732, 2819  # Image size 1600x1200
     hfov, vfov = 69.6, 55.2  # degrees
     
     # Estimate target coordinates
