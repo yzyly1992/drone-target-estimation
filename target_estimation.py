@@ -23,7 +23,7 @@ def estimate_real_coords(drone_lat, drone_lon, altitude, heading, gimbal_pitch, 
     delta_elevation = ((image_height / 2 - y_pixel) / (image_height / 2)) * (vfov / 2)
     
     total_pitch = gimbal_pitch + delta_elevation
-    if total_pitch >= 0 or total_pitch <= -90:
+    if total_pitch >= 0 or total_pitch <= -120:
         raise ValueError(f"Invalid pitch: {total_pitch}°")
     
     # Normalize heading to 0-360 and compute total azimuth
